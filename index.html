@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0);
+
+        }
+
+        .chapter-cover {
+            height: 100vh;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+        @font-face {
+            font-family: biaotisong;
+            src: url("font/华康标题宋.ttf");
+        }
+
+        .chapter-cover1 {
+            background-image: url(images/01.jpg);
+        }
+
+        .chapter-cover2 {
+            background-image: url(images/02.jpg);
+        }
+
+        .chapter-cover3 {
+            background-image: url(images/03.jpg);
+        }
+
+        .chapter-title {
+            display: flex;
+            font-family: biaotisong;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            color: #FFF;
+
+        }
+
+        .chaper-content {
+            max-width: 750px;
+            margin: auto;
+            padding: 0 15px;
+            box-sizing: border-box;
+            text-align: justify;
+        }
+
+        .fl-container {
+            max-width: 550px;
+            margin: auto;
+        }
+
+        .flourish-credit {
+            display: none;
+        }
+
+        .flourish-chart {
+            position: sticky;
+            top: 0;
+            z-index: -1;
+        }
+
+        .desc {
+            max-width: 750px;
+            margin: 300px auto;
+            text-align: justify;
+            padding: 40px;
+            color: #000;
+            line-height: 1.5;
+            text-indent: 2em;
+            background: rgba(255, 255, 255, .9);
+            box-shadow: 0 0 14px 0px rgb(188 188 188 / 50%);
+            margin-bottom: 80px;
+        }
+
+        .menu {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            font-size: 40px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            color: #DDD;
+        }
+
+        .menu:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="hamburger">&#9776;</div>
+        <div class="dropdown-content">
+            <a href="#chapter-cover1" class="smooth">Part 1</a>
+            <a href="#chapter-cover2" class="smooth">Part 2</a>
+            <a href="#chapter-cover3" class="smooth">Part 3</a>
+        </div>
+    </div>
+    <div class="chapter-cover chapter-cover1" id="chapter-cover1">
+        <div class="chapter-title">
+            章节标题
+        </div>
+    </div>
+
+    <div class="chaper-content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam dolor incidunt quae quia dignissimos aliquid,
+            adipisci reiciendis alias hic deserunt obcaecati. Odio dolorem aspernatur iure delectus tenetur deleniti
+            unde quos.</p>
+        <p>Blanditiis, alias. Quo amet aliquid nemo reiciendis iusto quas, fuga exercitationem. Officia dignissimos ad
+            neque, dolorum reprehenderit tempore autem itaque rem, perferendis nihil, maxime minima recusandae natus
+            maiores fugit eius.</p>
+        <p>Enim sapiente debitis omnis mollitia, quas et? Amet libero architecto sed, rerum similique quae eligendi,
+            praesentium iusto, quibusdam earum officia impedit officiis perferendis fugiat illo nemo ipsam pariatur?
+            Laboriosam, nulla!</p>
+        <p>Doloremque eligendi, illo sit, natus asperiores nam impedit quos eos maiores assumenda culpa deserunt non
+            laborum suscipit iusto? Quasi officiis omnis officia nostrum perspiciatis! Quisquam nesciunt mollitia ipsum
+            esse nostrum?</p>
+        <p>Animi, consequatur? Iure similique ullam non maxime, odio perspiciatis, molestiae totam assumenda soluta
+            provident a beatae. Eveniet aspernatur veritatis at similique cumque tenetur reiciendis natus soluta, a,
+            quas eius earum.</p>
+        <div class="fl-container">
+            <div class="flourish-embed flourish-chart" data-src="visualisation/9231053">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+            <div class="desc" id="desc1">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quas temporibus. Nisi
+                    rem
+                    excepturi ex nam! Iure autem, nulla maiores, dolore voluptatem architecto soluta culpa aut
+                    saepe, fuga eaque rem.</p>
+            </div>
+            <div class="desc" id="desc2">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quas temporibus. Nisi
+                    rem
+                    excepturi ex nam! Iure autem, nulla maiores, dolore voluptatem architecto soluta culpa aut
+                    saepe, fuga eaque rem.</p>
+            </div>
+            <div class="desc" id="desc3">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quas temporibus. Nisi
+                    rem
+                    excepturi ex nam! Iure autem, nulla maiores, dolore voluptatem architecto soluta culpa aut
+                    saepe, fuga eaque rem.</p>
+            </div>
+        </div>
+        <p>Ducimus corrupti cum ipsam illum quaerat magni minus dolor mollitia dignissimos. Error velit repudiandae
+            voluptatum natus rem voluptas molestiae laborum recusandae est, excepturi rerum, ut explicabo. Non totam
+            quidem laudantium.</p>
+        <p>Maiores quia id, sed aliquam aliquid, nulla facilis incidunt explicabo minima, provident est culpa nemo. Sunt
+            dolore ad culpa explicabo fugit, possimus atque perspiciatis provident dolores beatae. Repellendus, incidunt
+            dignissimos?</p>
+        <p>Corrupti deserunt, fugit iure quas repudiandae eligendi laboriosam vel quisquam sint veritatis, quos,
+            similique minus est laudantium enim impedit natus cumque saepe voluptatum inventore! Quam quasi qui
+            pariatur. Culpa, sed.</p>
+        <p>Quos id quod quas voluptatum in corrupti, rerum excepturi fugiat neque, officiis fugit dignissimos non
+            deleniti, facere cumque! Quaerat ipsam alias aliquid minus similique velit earum, temporibus atque dolores
+            quos!</p>
+        <p>Illum unde eius ipsa sit voluptatibus architecto mollitia quibusdam magnam fugit aperiam nulla aliquid
+            tempore quas ex fugiat facilis perferendis quae animi, dicta consequatur corrupti, sint quam iste eum. Unde?
+        </p>
+    </div>
+    <div class="chapter-cover chapter-cover2" id="chapter-cover2">
+        <div class="chapter-title">
+            章节标题
+        </div>
+    </div>
+
+    <div class="chaper-content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam dolor incidunt quae quia dignissimos aliquid,
+            adipisci reiciendis alias hic deserunt obcaecati. Odio dolorem aspernatur iure delectus tenetur deleniti
+            unde quos.</p>
+        <p>Blanditiis, alias. Quo amet aliquid nemo reiciendis iusto quas, fuga exercitationem. Officia dignissimos ad
+            neque, dolorum reprehenderit tempore autem itaque rem, perferendis nihil, maxime minima recusandae natus
+            maiores fugit eius.</p>
+        <p>Enim sapiente debitis omnis mollitia, quas et? Amet libero architecto sed, rerum similique quae eligendi,
+            praesentium iusto, quibusdam earum officia impedit officiis perferendis fugiat illo nemo ipsam pariatur?
+            Laboriosam, nulla!</p>
+        <div class="fl-container">
+            <div class="flourish-embed flourish-chart" data-src="visualisation/13341335">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+            </div>
+            <div class="desc">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quas temporibus. Nisi
+                    rem
+                    excepturi ex nam! Iure autem, nulla maiores, dolore voluptatem architecto soluta culpa aut
+                    saepe, fuga eaque rem.</p>
+            </div>
+            <div class="desc">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quas temporibus. Nisi
+                    rem
+                    excepturi ex nam! Iure autem, nulla maiores, dolore voluptatem architecto soluta culpa aut
+                    saepe, fuga eaque rem.</p>
+            </div>
+            <div class="desc">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, quas temporibus. Nisi
+                    rem
+                    excepturi ex nam! Iure autem, nulla maiores, dolore voluptatem architecto soluta culpa aut
+                    saepe, fuga eaque rem.</p>
+            </div>
+        </div>
+        <p>Doloremque eligendi, illo sit, natus asperiores nam impedit quos eos maiores assumenda culpa deserunt non
+            laborum suscipit iusto? Quasi officiis omnis officia nostrum perspiciatis! Quisquam nesciunt mollitia ipsum
+            esse nostrum?</p>
+        <p>Animi, consequatur? Iure similique ullam non maxime, odio perspiciatis, molestiae totam assumenda soluta
+            provident a beatae. Eveniet aspernatur veritatis at similique cumque tenetur reiciendis natus soluta, a,
+            quas eius earum.</p>
+        <p>Ducimus corrupti cum ipsam illum quaerat magni minus dolor mollitia dignissimos. Error velit repudiandae
+            voluptatum natus rem voluptas molestiae laborum recusandae est, excepturi rerum, ut explicabo. Non totam
+            quidem laudantium.</p>
+        <p>Maiores quia id, sed aliquam aliquid, nulla facilis incidunt explicabo minima, provident est culpa nemo. Sunt
+            dolore ad culpa explicabo fugit, possimus atque perspiciatis provident dolores beatae. Repellendus, incidunt
+            dignissimos?</p>
+        <p>Corrupti deserunt, fugit iure quas repudiandae eligendi laboriosam vel quisquam sint veritatis, quos,
+            similique minus est laudantium enim impedit natus cumque saepe voluptatum inventore! Quam quasi qui
+            pariatur. Culpa, sed.</p>
+        <p>Quos id quod quas voluptatum in corrupti, rerum excepturi fugiat neque, officiis fugit dignissimos non
+            deleniti, facere cumque! Quaerat ipsam alias aliquid minus similique velit earum, temporibus atque dolores
+            quos!</p>
+        <p>Illum unde eius ipsa sit voluptatibus architecto mollitia quibusdam magnam fugit aperiam nulla aliquid
+            tempore quas ex fugiat facilis perferendis quae animi, dicta consequatur corrupti, sint quam iste eum. Unde?
+        </p>
+    </div>
+    <div class="chapter-cover chapter-cover3" id="chapter-cover3">
+        <div class="chapter-title">
+            章节标题
+        </div>
+    </div>
+
+    <div class="chaper-content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam dolor incidunt quae quia dignissimos aliquid,
+            adipisci reiciendis alias hic deserunt obcaecati. Odio dolorem aspernatur iure delectus tenetur deleniti
+            unde quos.</p>
+        <p>Blanditiis, alias. Quo amet aliquid nemo reiciendis iusto quas, fuga exercitationem. Officia dignissimos ad
+            neque, dolorum reprehenderit tempore autem itaque rem, perferendis nihil, maxime minima recusandae natus
+            maiores fugit eius.</p>
+        <p>Enim sapiente debitis omnis mollitia, quas et? Amet libero architecto sed, rerum similique quae eligendi,
+            praesentium iusto, quibusdam earum officia impedit officiis perferendis fugiat illo nemo ipsam pariatur?
+            Laboriosam, nulla!</p>
+        <p>Doloremque eligendi, illo sit, natus asperiores nam impedit quos eos maiores assumenda culpa deserunt non
+            laborum suscipit iusto? Quasi officiis omnis officia nostrum perspiciatis! Quisquam nesciunt mollitia ipsum
+            esse nostrum?</p>
+        <p>Animi, consequatur? Iure similique ullam non maxime, odio perspiciatis, molestiae totam assumenda soluta
+            provident a beatae. Eveniet aspernatur veritatis at similique cumque tenetur reiciendis natus soluta, a,
+            quas eius earum.</p>
+        <p>Ducimus corrupti cum ipsam illum quaerat magni minus dolor mollitia dignissimos. Error velit repudiandae
+            voluptatum natus rem voluptas molestiae laborum recusandae est, excepturi rerum, ut explicabo. Non totam
+            quidem laudantium.</p>
+        <p>Maiores quia id, sed aliquam aliquid, nulla facilis incidunt explicabo minima, provident est culpa nemo. Sunt
+            dolore ad culpa explicabo fugit, possimus atque perspiciatis provident dolores beatae. Repellendus, incidunt
+            dignissimos?</p>
+        <p>Corrupti deserunt, fugit iure quas repudiandae eligendi laboriosam vel quisquam sint veritatis, quos,
+            similique minus est laudantium enim impedit natus cumque saepe voluptatum inventore! Quam quasi qui
+            pariatur. Culpa, sed.</p>
+        <p>Quos id quod quas voluptatum in corrupti, rerum excepturi fugiat neque, officiis fugit dignissimos non
+            deleniti, facere cumque! Quaerat ipsam alias aliquid minus similique velit earum, temporibus atque dolores
+            quos!</p>
+        <p>Illum unde eius ipsa sit voluptatibus architecto mollitia quibusdam magnam fugit aperiam nulla aliquid
+            tempore quas ex fugiat facilis perferendis quae animi, dicta consequatur corrupti, sint quam iste eum. Unde?
+        </p>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".smooth").click(function () {
+                var href = $(this).attr("href");
+                var pos = $(href).offset().top;
+                $("html,body").animate({ scrollTop: pos }, 1000);
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
