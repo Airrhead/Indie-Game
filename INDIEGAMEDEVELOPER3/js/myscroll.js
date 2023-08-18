@@ -5,7 +5,20 @@ var controller = new ScrollMagic.Controller();
 var scene = new ScrollMagic.Scene({
   triggerElement: "#section2",
 })
-  .setTween("#xiaceng", {
-    opacity: 1.2,
+  .setTween("#shangceng", {
+    opacity: 0,
   })
+
+  .addTo(controller);
+//初始化controller
+var controller = new ScrollMagic.Controller();
+
+//滚动位置确定
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#section2",
+})
+  .setTween("#xiaceng", {
+    opacity: 1,
+  })
+
   .addTo(controller);
