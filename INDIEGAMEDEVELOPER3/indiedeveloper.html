@@ -20,6 +20,7 @@
         background-image: url(images/bg6.jpg);
         background-attachment: fixed;
         font-family: "mine";
+        font-size: 30px;
         cursor: url("images/zhizhen.cur") auto;
       }
       #snow-canvas1 {
@@ -177,7 +178,7 @@
         line-height: 35px;
         letter-spacing: 1.5px;
         font-weight: 100;
-        font-size: 18px;
+        font-size: 17px;
         color: #69696c;
       }
 
@@ -279,21 +280,21 @@
       .desc {
         max-width: 400px;
         margin: 300px auto;
-        text-align: justify;
-        padding: 40px;
-        color: #5d5d60;
-        line-height: 1.5;
-        text-indent: 2em;
-        background-image: url(images/kuang.png);
-        background-size: 100% 100%;
-        margin-bottom: 80px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        pointer-events: none;
+        position: relative;
+      }
+      .desc img{
+        max-width: 200%;
+        max-height: 200%;
         pointer-events: none;
         opacity: 0.8;
         position: relative;
       }
-      .desc p {
-        margin: 5px auto;
-      }
+    
 
       .minigame-container {
         max-width: 550px;
@@ -331,21 +332,21 @@
 
       .dialogue-pics-left {
         max-width: 1000px;
-        margin: -130px auto -130px;
+        margin: -50px 200px -50px;
         display: flex;
         justify-content: flex-start;
       }
       .dialogue-pics-left img {
-        width: 80%;
+        width: 55%;
       }
       .dialogue-pics-right {
         max-width: 1000px;
-        margin: -130px auto -130px;
+        margin: -50px 200px -50px;
         display: flex;
         justify-content: flex-end;
       }
       .dialogue-pics-right img {
-        width: 80%;
+        width: 55%;
       }
 
       .ending {
@@ -476,22 +477,25 @@
     <br />
     <br />
     <br />
-    <img
-        src="images/up1.png"
-        width="100%"
-        style="margin-bottom: -62px;"
-        alt=""
-      />
+    
 
 
-    <div class="chapter-cover chapter-cover2" id="chapter-cover2"></div>
-
+    <div class="chapter-cover chapter-cover2" id="chapter-cover2">
+      <img
+      src="images/up1.png"
+      width="100%"
+      style="margin-top: -87px;"
+      alt=""
+    />
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-top: -87px;"
+    style="margin-bottom: -688px;"
     alt=""
   />
+  </div>
+
+
 
     <div class="chapter-content">
       <br />
@@ -520,17 +524,19 @@
           />
         </div>
         <div class="desc">
-          <p>独立游戏的制作中，大多是单打独斗的开发者。</p>
+          <img src="images/ex1.png">
         </div>
         <div class="desc">
-          <p>
-            44.52%的独立游戏研发人员表示开发人数仅有1人，仅有2.99%的开发者表示团队研发人员的规模在8人以上。
-          </p>
+            <img src="images/ex2.png">
         </div>
         <div class="desc">
-          <p>
-            此外，Indienova的报告表示，有 16.36% 的开发者希望能够找到合作伙伴。
-          </p>
+          <img src="images/ex3.png">
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
         </div>
       </div>
       <p data-aos="fade-up">
@@ -571,7 +577,7 @@
               text-align: center;
             "
           >
-            <p>（点击查看）</p>
+            <p style="margin-top: -45px;font-size: 15px;">（点击查看）</p>
           </div>
         </div>
 
@@ -583,14 +589,16 @@
         </script>
 
         <div class="desc">
-          <p>
-            声画是一款游戏打动人心的基础，但行业内真正能做美工的不足20%，会做音乐的人更少。
-          </p>
+         <img src="images/ex4.png"> 
         </div>
         <div class="desc">
-          <p>
-            在资金、人手经验都不足的情况，独立游戏制作人的日常就是打破脑壳做出一顿“无米之炊”。
-          </p>
+          <img src="images/ex5.png"> 
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
         </div>
       </div>
       <p data-aos="fade-up">
@@ -643,16 +651,22 @@
           />
         </div>
         <div class="desc">
-          156个团队中有83个团队自述经济状况时提到“为爱发电”，仅有44个团队提出会有基础薪资，17个队伍要求全职开发。
+          <img src="images/ex6.png">
         </div>
         <div class="desc">
-          54个队伍在寻求投资，19个队伍已经在洽谈，而22个队伍已有投资。
+          <img src="images/ex7.png">
         </div>
         <div class="desc">
-          61个队伍已到demo阶段，这意味着作品可以拿去上线宣传了，这可能会获得一定盈利。
+          <img src="images/ex8.png">
         </div>
         <div class="desc">
-          31个团队表示有一定资金能力，8个队伍直言“没一点钱”。
+          <img src="images/ex9.png">
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
         </div>
       </div>
       <p data-aos="fade-up">
@@ -803,13 +817,19 @@
           />
         </div>
         <div class="desc">
-          作为国内知名的众筹平台，摩点网于2014年4月成立。截止到2023年3月31日，我们筛选出57款独立游戏，其中成功与失败的比例是35:9。
+          <img src="images/ex10.png">
         </div>
         <div class="desc">
-          这说明，只要展现出一定的制作能力的团队，就基本能拿到资金。
+          <img src="images/ex11.png">
         </div>
         <div class="desc">
-          从目标金额来看，制作者所求不多，最高的也不到10万元。但更多的开发者往往会得到超越预期的回报。平均来看，实际的众筹金额会更高。
+          <img src="images/ex12.png">
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
         </div>
       </div>
       <p data-aos="fade-up">
@@ -824,20 +844,22 @@
     </div>
     <br />
     <br />
-    <img
-    src="images/up1.png"
-    width="100%"
-    style="margin-bottom: -62px;"
-    alt=""
-  />
 
-    <div class="chapter-cover chapter-cover3" id="chapter-cover3"></div>
+    <div class="chapter-cover chapter-cover3" id="chapter-cover3">
+      <img
+      src="images/up1.png"
+      width="100%"
+      style="margin-top: -87px;"
+      alt=""
+    />
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-top: -87px;"
+    style="margin-bottom: -688px;"
     alt=""
   />
+    </div>
+   
 
     <div class="chapter-content">
       <br />
@@ -866,24 +888,22 @@
         </div>
 
         <div class="desc">
-          <p>
-            游戏版号是游戏的出生证明，是保护开发者著作权的法律文件，也是国家允许游戏出版上线运营的批准文件。想要在国内市场上线，申请版号是必须的。
-          </p>
+          <img src="images/ex13.png">
         </div>
         <div class="desc">
-          <p>
-            申请版号的流程主要是3个环节：准备材料、省级审批、国家复审。这个周期在半年到两年不等，即使是最理想的一次通过，也至少需要115天。
-          </p>
+          <img src="images/ex14.png">
         </div>
         <div class="desc">
-          <p>
-            但更多团队表示往往要多次送审，修改递交后，每次的审核又要重新等待一个周期。
-          </p>
+          <img src="images/ex15.png">
         </div>
         <div class="desc">
-          <p>
-            530天，抑或是更久。在漫长的等待与繁琐的工作中，是源源不断流失的时间与成本。
-          </p>
+          <img src="images/ex16.png">
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
         </div>
       </div>
       <p data-aos="fade-up">
@@ -965,20 +985,23 @@
 
   
     </div>
-    <img
-    src="images/up1.png"
-    width="100%"
-    style="margin-bottom: -62px;"
-    alt=""
-  />
+ 
 
-    <div class="chapter-cover chapter-cover4" id="chapter-cover4"></div>
+    <div class="chapter-cover chapter-cover4" id="chapter-cover4">
+      <img
+      src="images/up1.png"
+      width="100%"
+      style="margin-top: -87px;"
+      alt=""
+    />
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-top: -87px;"
+    style="margin-bottom: -688px;"
     alt=""
   />
+    </div>
+
     <div class="chapter-content">
       <div class="filler"></div>
       <br />
@@ -1020,19 +1043,22 @@
       </p>
       <br />
     </div>
-    <img
-    src="images/up1.png"
-    width="100%"
-    style="margin-bottom: -62px;"
-    alt=""
-  />
-    <div class="chapter-cover chapter-cover5" id="chapter-cover5"></div>
+
+    <div class="chapter-cover chapter-cover5" id="chapter-cover5">
+      <img
+      src="images/up1.png"
+      width="100%"
+      style="margin-top: -87px;"
+      alt=""
+    />
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-top: -87px;"
+    style="margin-bottom: -688px;"
     alt=""
   />
+    </div>
+ 
     <div class="chapter-content">
       <br/>
       <div class="filler"></div>
@@ -1061,10 +1087,16 @@
           alt" ="" />
         </div>
         <div class="desc">
-          销量前十的国产独立游戏，往往都可以在淘宝上以一半的价格买到。
+          <img src="images/ex17.png">
         </div>
         <div class="desc">
-          甚至其中最贵的一款游戏《侠知道》原价98，但盗版仅需要42块。
+          <img src="images/ex18.png">
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
+        </div>
+        <div class="desc" style="opacity: 0">
+          <p>第三条</p>
         </div>
       </div>
 
@@ -1155,19 +1187,22 @@
     </div>
     <br />
     <br />
-    <img
-    src="images/up1.png"
-    width="100%"
-    style="margin-bottom: -62px;"
-    alt=""
-  />
-    <div class="chapter-cover chapter-cover6" id="chapter-cover6"></div>
+  >
+    <div class="chapter-cover chapter-cover6" id="chapter-cover6">
+      <img
+      src="images/up1.png"
+      width="100%"
+      style="margin-top: -87px;"
+      alt=""
+    />
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-top: -87px;"
+    style="margin-bottom: -688px;"
     alt=""
   />
+    </div>
+   
     <div class="chapter-content">
       <div class="filler"></div>
       <div class="filler"></div>
