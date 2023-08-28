@@ -16,12 +16,13 @@
       }
 
       body {
+        cursor: url("images/zhizhen.png"),auto;
         margin: 0;
         background-image: url(images/bg6.jpg);
         background-attachment: fixed;
         font-family: "mine";
-        font-size:19px;
-        cursor: url("images/zhizhen.cur") auto;
+        font-size:15px;
+       
       }
       #snow-canvas1 {
         position: absolute;
@@ -82,7 +83,7 @@
         position: absolute;
         min-width: 160px;
         margin-left: 75px;
-        line-height: 30px;
+        line-height: 35px;
         font-weight: 800;
       }
 
@@ -115,10 +116,10 @@
       .container1 img {
         /* 让一个div里的img重叠 */
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: auto;
+        left: auto;
+        max-width: 100%;
+        max-height: 100%;
         object-fit: cover;
       }
 
@@ -138,10 +139,13 @@
 
       .introduction {
         max-width: 750px;
-        margin: 50px auto;
+        font-weight: 100;
+        font-size: 19px;
+        margin:30px auto;
         text-align: center;
-        line-height: 25px;
-        letter-spacing: 1.5px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        color: #69696c;
       }
 
       .chapter-cover1 {
@@ -174,13 +178,22 @@
         margin: auto;
         padding: 0 15px;
         box-sizing: border-box;
+       
+      }
+
+      .chapter-content p{
+        max-width: 600px;
+        margin: 30px auto;
         text-align: justify;
         line-height: 35px;
         letter-spacing: 1.5px;
         font-weight: 100;
-        font-size: 17px;
+        font-size: 16px;
         color: #69696c;
+        
       }
+      
+      
 
       .filler {
         height: 15px;
@@ -224,6 +237,7 @@
       .gameitem img {
         width: 100%;
         display: block;
+        border-radius: 5%;
       }
 
       .gameitem:hover {
@@ -240,9 +254,10 @@
 
       .gameinfo {
         position: absolute;
+        border-radius: 5%;
         left: 0;
         bottom: 0;
-        padding: 8px;
+        padding: 33px;
         color: #fff;
         opacity: 0;
         width: 100%;
@@ -251,7 +266,8 @@
         background-color: rgba(0, 0, 0, 0.5);
         transition: opacity 0.5s transform 1.5s 1.5s;
         transform: translateY(0);
-        letter-spacing: -0.5px;
+        letter-spacing: 2.5px;
+        line-height: 30px;
       }
 
       .gameitem:hover .gameinfo {
@@ -386,7 +402,7 @@
         <div data-depth="0.8" class="cloud">
           <img src="images/cloud.png" alt="" />
         </div>
-        <div data-depth="0.5" class="windmill">
+        <div data-depth="0.2" class="windmill">
           <img src="images/fannew.png" alt="" class="rotate" />
           <img src="images/body.png" alt="" class="body" />
         </div>
@@ -427,14 +443,14 @@
       </div>
     </div>
 
-    <div class="chapter-content" style="text-align: center; margin-bottom: 200px;" >
+    <div class="introduction" >
       <p>提起游戏，</p>
       <p>大多数人第一时间想到的就是——娱乐，</p>
       <p>轰轰烈烈、冲突激荡，让人肾上腺素飚增的娱乐。</p>
       <p>但是，这世上也还有一些作品，</p>
       <p>更强调情感、更体现共情。</p>
       <p>它们无限贴近于“第九艺术”概念的范畴，</p>
-      <p>承载着创作者对世界的的探索与表达。</p>
+      <p style="margin-bottom: 150px;">承载着创作者对世界的的探索与表达。</p>
     </div>
 
     <div class="dialogue-pics-left" data-aos="fade-up">
@@ -449,9 +465,9 @@
     <div class="dialogue-pics-right" data-aos="fade-up">
       <img src="images/duihua44.png" alt="" />
     </div>
-    <div class="chapter-content">
-      <div class="introduction" style="margin-top: 200px;">
-        <p>在这个 3A 游戏大作成本水涨船高的时代，</p>
+    
+      <div class="introduction" >
+        <p style="margin-top: 100px;">在这个 3A 游戏大作成本水涨船高的时代，</p>
         <p>独立游戏另辟蹊径，</p>
         <p>近年来佳作频出：</p>
         <p>《拣爱》、《鬼谷八荒》、《元气骑士》……</p>
@@ -462,8 +478,8 @@
         <p>出师未捷身先死的也绝非罕见。</p>
       </div>
       <br />
-    </div>
-    <div class="chapter-content">
+   
+ 
       <div class="introduction">
         <p>
           有人说：虽然独立游戏这几年出了很多爆款，但无声无息死掉的游戏不计其数
@@ -473,7 +489,7 @@
         <p style="color: #b7ba84">从1695款国产独游与28位开发者的交流中，</p>
         <p style="color: #b7ba84">我们试图勾勒一场关于“独立游戏”的冒险之旅。</p>
       </div>
-    </div>
+    
     <br />
     <br />
     <br />
@@ -490,7 +506,7 @@
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-bottom: -688px;"
+    style="margin-bottom: -54%;"
     alt=""
   />
   </div>
@@ -499,8 +515,10 @@
 
     <div class="chapter-content">
       <br />
+
+    
   
-      <p data-aos="fade-up" style="color: #b7ba84">
+      <p data-aos="fade-up" style="color: #b7ba84; max-width: 600px;">
         “我们还有很多东西没做，还想继续下去。”
       </p>
 
@@ -513,6 +531,8 @@
       <p data-aos="fade-up">
         但未过几日，仅有两人的团队最终也只剩下王剑一个人。
       </p>
+
+   
 
       <div class="charts-container">
         <div class="flourish-chart">
@@ -601,7 +621,7 @@
           <p>第三条</p>
         </div>
       </div>
-      <p data-aos="fade-up">
+      <p data-aos="fade-up" style="margin-top: 50px;">
         《丸霸无双》就是这样一款典型游戏，画面上的人物没有复杂的人设或者装饰，甚至连完整的四肢都没有。躯干和脑袋都是简单的球体，再随便加上几笔，人物的脸就此成型。<span
           style="color: #b7ba84"
           >它荒诞、抽象，仔细看还有点诡异，好像在跟玩家开一个魔性的玩笑。</span
@@ -615,8 +635,8 @@
       </p>
       <img
         src="images/qinquan1.png"
-        width="120%"
-        style="margin-left: -10%"
+        width="130%"
+        style="margin-left: -15%; margin-top: -10%; margin-bottom: -10%;"
         alt=""
       />
       <p data-aos="fade-up">
@@ -645,8 +665,8 @@
         <div class="flourish-chart">
           <img
             src="images/jingji.png"
-            width="140%"
-            style="margin-left: -20%"
+            width="145%"
+            style="margin-left: -25%"
             alt=""
           />
         </div>
@@ -812,8 +832,8 @@
         <div class="flourish-chart">
           <img
             src="images/zhongchou33.png"
-            width="155%"
-            style="margin-left: -25%"
+            width="145%"
+            style="margin-left: -24%"
           />
         </div>
         <div class="desc">
@@ -855,7 +875,7 @@
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-bottom: -688px;"
+    style="margin-bottom: -54%;"
     alt=""
   />
     </div>
@@ -997,7 +1017,7 @@
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-bottom: -688px;"
+    style="margin-bottom: -54%;"
     alt=""
   />
     </div>
@@ -1034,7 +1054,7 @@
         但通过调查发现，超过百万粉丝的博主报价过万，是众筹都可能筹不来的价格。
       </p>
 
-      <img src="images/upzhu.png" width="150%" style="margin-left: -23%" />
+      <img src="images/upzhu.png" width="150%" style="margin-left: -25%" />
       <br />
       <p data-aos="fade-up">
         但这种宣传有时也很简单，制作人亚恒提到<span style="color: #b7ba84"
@@ -1054,7 +1074,7 @@
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-bottom: -688px;"
+    style="margin-bottom: -54%;"
     alt=""
   />
     </div>
@@ -1083,7 +1103,7 @@
 
       <div class="charts-container">
         <div class="flourish-chart" style="margin-left: -18%">
-          <img src="images/jiage33.png" width="150%" style="margin-left: -15%;"
+          <img src="images/jiage33.png" width="130%" style="margin-left: -7%;"
           alt" ="" />
         </div>
         <div class="desc">
@@ -1169,7 +1189,7 @@
       <div class="filler"></div>
       <div class="charts-container">
         <div class="flourish-chart">
-          <img src="images/fufei.png" width="155%" style="margin-left: -25%" />
+          <img src="images/fufei.png" width="135%" style="margin-left: -24%" />
         </div>
       </div>
       <p data-aos="fade-up">
@@ -1198,7 +1218,7 @@
     <img
     src="images/down2.png"
     width="100%"
-    style="margin-bottom: -688px;"
+    style="margin-bottom: -54%;"
     alt=""
   />
     </div>
@@ -1430,7 +1450,7 @@
               <p>可视化：葛韵枫</p>
               <p>美工：葛韵枫</p>
               <p>网页：李映霖、方扬</p>
-              <p>文案：方扬、葛韵枫</p>
+              <p>文案：方扬、葛韵枫、李映霖</p>
             </div>
           </div>
         </div>
