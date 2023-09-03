@@ -20,7 +20,7 @@
 }
 
 .swiper-slide {
-  font-size: 8px;
+  font-size: 13px;
   color: #d2d2d2;
   box-sizing: border-box;
   position: relative;
@@ -74,9 +74,9 @@
 
 .slide2 div {
   width: 200px;
-  margin-top: 42%;
+  margin-top: 46.5%;
   margin-left: 49%;
-  margin-bottom: -289px;
+  margin-bottom: -42.4%;
 }
 
 .slide2 input[type="range"] {

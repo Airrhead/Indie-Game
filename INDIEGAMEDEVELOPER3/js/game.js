@@ -94,7 +94,7 @@ $(document).ready(function () {
     peoplenum = $("#peoplenum").val();
     period = $("#period").val();
 
-    dev_expenses = salary * peoplenum * period;
+    dev_expenses = salary * 1000 * peoplenum * period;
 
     for (var i = 0; i < gameArr.length; i++) {
       all_comments = gameArr[i].good_comments + gameArr[i].bad_comments;
