@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
 }
 
-section {
+#sectionone {
   height: 100vh;
   overflow: hidden;
 }

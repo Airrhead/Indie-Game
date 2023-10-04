@@ -42,10 +42,10 @@ $(document).ready(function () {
     $(".eventsource1").html(events[arrIndex[0]].source);
 
     $(".eventname2").html(events[arrIndex[1]].name);
-    $(".eventsource2").html(events[arrIndex[0]].source);
+    $(".eventsource2").html(events[arrIndex[1]].source);
 
     $(".eventname3").html(events[arrIndex[2]].name);
-    $(".eventsource3").html(events[arrIndex[0]].source);
+    $(".eventsource3").html(events[arrIndex[2]].source);
 
     threshold = threshold + events[arrIndex[0]].value;
     threshold = threshold + events[arrIndex[1]].value;
