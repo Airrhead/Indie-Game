@@ -1,0 +1,23 @@
+/* Give the existing game its own centered viewport; isolate the extracted chart. */
+body{display:block;padding:0;}
+.game-stage{display:flex;box-sizing:border-box;min-height:100vh;min-height:100svh;padding:16px;}
+.release-comparison{padding:32px 16px 0;}
+.comparison-hint{margin:0 auto 24px;text-align:center;font:14px/1.5 Arial,sans-serif;color:#69696c;}
+.release-comparison .charts-container{width:100%;max-width:1000px;margin:auto;}
+.release-comparison .container1{position:sticky;top:clamp(16px,10vh,100px);width:100%;aspect-ratio:16 / 9;margin:auto;}
+.release-comparison .container1 img{position:absolute;inset:0;width:100%;height:auto;}
+.release-comparison #shangceng{z-index:3;opacity:1;}
+.release-comparison #xiaceng{z-index:0;opacity:0;}
+.release-comparison .placeholder{opacity:0;pointer-events:none;margin-bottom:600px;}
+.release-comparison .placeholder p{margin:1em 0;}
+.release-comparison .placeholder:last-child{margin-bottom:60px;}
+/* Keep the same trigger ordering on short screens and avoid sticky-image clipping. */
+@media(max-height:650px) and (min-width:700px){
+  .release-comparison .charts-container{max-width:min(1000px,calc((100svh - 48px) * 16 / 9));}
+  .release-comparison .container1{top:24px;}
+}
+
+.data-note{max-width:760px;margin:0 auto 64px;padding:28px 24px;border-top:1px solid #bfc3ba;font:15px/1.65 Arial,sans-serif;color:#626660;}
+.data-note h2{font-size:19px;margin:0 0 12px;}
+.data-note p{margin:0 0 12px;}
+.data-note a{color:#465b42;text-underline-offset:4px;}

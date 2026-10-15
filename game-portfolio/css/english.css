@@ -1,0 +1,32 @@
+/* English text stays in the original artwork's text boxes. */
+body{min-height:100vh;min-height:100svh;display:flex;box-sizing:border-box;padding:16px;}
+.calculator{width:100%;max-width:500px;min-width:0;margin:auto;flex-shrink:0;container-type:inline-size;}
+.screen-title{position:absolute;color:#ededed;font-family:Arial,sans-serif;font-weight:700;line-height:1.1;white-space:nowrap;}
+.intro-title{left:9%;right:9%;top:63.5%;font-size:6.5cqw;text-align:center;text-shadow:2px 3px 2px #333;}
+.plan-title{left:10%;right:10%;top:11.5%;font-size:6.6cqw;text-align:center;}
+.event-title{left:10.5%;top:8%;font-size:6.6cqw;}
+.sliders .parameter-label{width:40%;flex-shrink:0;margin-right:8cqw;color:#ededed;font-family:Arial,sans-serif;font-size:4cqw;font-weight:700;white-space:nowrap;}
+.sliders div{margin-bottom:10cqw;}
+.sliders input[type=range]{min-width:0;}
+.sliders span{font-size:4cqw;}
+.eventname{font-family:Arial,sans-serif;font-size:2.6cqw;line-height:1.2;}
+.eventsource{font-family:Arial,sans-serif;font-size:2.3cqw;line-height:1.2;margin-top:1.2cqw;}
+.randomevent{padding:2cqw 3cqw;min-height:0;}
+#gameresult{content:url('../images/002-en.png');}
+.result-heading{position:absolute;left:10.5%;top:8.5%;font:bold 4.5cqw/1.1 Arial,sans-serif;color:#ededed;white-space:nowrap;}
+#result{font-family:Arial,sans-serif;font-size:5.6cqw;}
+.ending{position:absolute;left:10.5%;right:8%;top:19%;color:#ededed;font-family:Arial,sans-serif;font-weight:bold;line-height:1.15;}
+.ending>div{font-size:7.5cqw;}
+.ending strong{display:block;font-size:12cqw;color:#ff747c;margin:4cqw 0;}
+.ending p{font-size:5.2cqw;line-height:1.4;margin:2cqw 0;}
+.ending small{font-size:2.7cqw;color:#c7c9bf;white-space:nowrap;}
+.ending-dead strong{font-size:23cqw;line-height:1.2;margin:2cqw 0 4cqw;}
+.ending-dead p{font-size:4.7cqw;}
+.slide4:has(#gameresult[src$="活.png"]) .ending-dead,.slide4:has(#gameresult[src$="死.png"]) .ending-alive{display:none;}
+/* Preserve original artwork outside the translated title areas. */
+.text-patch{position:absolute;inset:0;pointer-events:none;background-size:100% 100%;background-repeat:no-repeat;z-index:1;}
+.patch-2{background-image:url('../images/002-en.png');clip-path:inset(10% 10% 81% 10%);}
+.patch-3{background-image:url('../images/003-en.png');clip-path:inset(7% 9% 86% 9%);}
+.screen-title{z-index:2;}
+.text-patch{background-color:#7e8878;}
+.swiper-slide .text-patch{margin:0;}

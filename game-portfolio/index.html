@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ride the Wind: Indie Game Dev Simulator</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/game.css">
+<link rel="icon" href="images/favicon.ico">
+<style>@font-face {
+      font-family: "mine";
+      src: url(font/MFFangHei_Noncommercial-Regular.ttf);
+    }
+
+    body {
+      cursor: url("images/zhizhen.png"), auto;
+      margin: 0;
+      background-image: url(images/bg.png);
+      background-attachment: fixed;
+      font-family: "mine";
+      font-size: 15px;
+
+    }</style><style>
+  .sliders span{
+      font-size: 20px;
+      font-family: "mine";
+      color: #d2d2d2;
+      
+  }
+</style><link rel="stylesheet" href="css/english.css">
+<link rel="stylesheet" href="css/release-comparison.css?v=2">
+</head><body>
+  <audio src="images/fanye.mp3" id="fanye"></audio>
+  <section class="game-stage" aria-label="Indie game simulator">
+  <div class="swiper calculator">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide1">
+        <img src="images/intro-background.png" class="bg" alt="" id="mybegin" /><div class="screen-title intro-title">Indie Game Dev Simulator</div>
+        <img src="images/button1-en.svg" class="game-btn" id="slide1-btn" alt="" />
+      </div>
+      <div class="swiper-slide slide2"><div class="text-patch patch-2" aria-hidden="true"></div>
+        <img src="images/002.png" class="bg" /><div class="screen-title plan-title">Make your own game!</div>
+        <div class="sliders">
+          <div>
+            <span class="parameter-label">Price (CNY)</span>
+            <input type="range" id="price" name="price" min="8" max="68" step="1" value="28" class="slider" />
+            <span id="priceSpan" style="margin-left: 10px;">28 </span>
+          </div>
+
+          <div>
+            <span class="parameter-label">Team size</span>
+            <input type="range" id="peoplenum" name="peoplenum" min="1" max="10" step="1" value="4" class="slider" />
+            <span id="peoplenumSpan" style="margin-left: 10px;">4 </span>
+          </div>
+
+          <div>
+            <span class="parameter-label">Pay (CNY/mo)</span>
+            <input type="range" id="salary" name="salary" min="2" max="30" step="1" value="5" class="slider" />
+            <span id="salarySpan" style="margin-left: 10px;">5</span><span id="danwei"
+              >k</span>
+          </div>
+
+          <div>
+            <span class="parameter-label">Time (months)</span>
+            <input type="range" id="period" name="period" min="12" max="56" step="1" value="18" class="slider" />
+            <span id="periodSpan" style="margin-left: 10px;">18 </span>
+          </div>
+        </div>
+        <img src="images/button2-en.svg" id="slide2-btn" />
+      </div>
+
+      <div class="swiper-slide slide3"><div class="text-patch patch-3" aria-hidden="true"></div>
+        <img src="images/003.png" class="bg" /><div class="screen-title event-title">In development...</div>
+        <div class="eventwrapper">
+          <div class="randomevent randomevent3">
+            <div class="eventname eventname1"></div>
+            <div class="eventsource eventsource1"></div>
+          </div>
+          <div class="randomevent randomevent2">
+            <div class="eventname eventname2"></div>
+            <div class="eventsource eventsource2"></div>
+          </div>
+          <div class="randomevent randomevent1">
+            <div class="eventname eventname3"></div>
+            <div class="eventsource eventsource3"></div>
+          </div>
+        </div>
+        <img src="images/button3-en.svg" id="slide3-btn" />
+      </div>
+
+      <div class="swiper-slide slide4">
+        <img src="images/活.png" class="bg" id="gameresult" alt="">
+        <div class="result-heading">Estimated failure rate:</div>
+        <div class="ending ending-alive"><div>Luckily...<br>your game</div><strong>SURVIVED!</strong><p>Indie survival is tough.<br>Keep going, keep creating.<br>See you next game!</p><small>*Our tester failed to survive in 20 tries.</small></div>
+        <div class="ending ending-dead"><div>Sadly...<br>your game</div><strong>DIED!</strong><p>Defeat is part of the journey.<br>Pick yourself up. Try again.</p></div>
+        <span id="result"></span>
+        <img src="images/button4-en.svg" id="slide4-btn" />
+      </div>
+
+    </div>
+  </div>
+
+
+
+</section>
+
+<section class="release-comparison" aria-label="Steam releases and domestic game approvals, 2020–2022">
+  <p class="comparison-hint">Scroll down to compare releases and approvals · Scroll up to return</p>
+  <div class="charts-container">
+    <div class="container1">
+      <img src="images/fabu-text-en.svg" alt="Chinese indie game releases on Steam by quarter. 2022: 52, 51, 58, 63. 2021: 69, 63, 40, 58. 2020: 56, 69, 63, 18. Source: the reporting team's coding of public Steam store data." id="shangceng" />
+      <img src="images/banhao-text-en.svg" alt="NPPA client-game approvals by quarter. 2022: blank, 5, 12, 19. 2021: 9, 8, 5, blank. 2020: 19, 14, 19, 10. Source: National Press and Publication Administration." id="xiaceng" />
+    </div>
+    <div class="placeholder" aria-hidden="true"><p>First step</p></div>
+    <div class="placeholder" aria-hidden="true"><p id="section2">Comparison step</p></div>
+    <div class="placeholder" aria-hidden="true"><p id="section3">Final step</p></div>
+  </div>
+</section>
+
+<footer class="data-note" aria-labelledby="data-note-title">
+  <h2 id="data-note-title">About the data</h2>
+  <p>The simulator uses 10,960 Steam game records. Estimated sales equal reviews × 30; estimated revenue retains 65% of sales value. Results describe the filtered sample, not an individual game's chance of success.</p>
+  <p>The charts compare Chinese indie releases on Steam with domestic client-game approvals in 2020–2022, using the reporting team's Steam counts and NPPA records. These are different populations.</p>
+  <a href="README.md">Read the full data &amp; methodology notes ↗</a>
+</footer>
+
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/game.js"></script>
+<script src="js/ScrollMagic.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/animation.gsap.js"></script>
+<script src="js/release-comparison.js"></script>
+</body></html>
