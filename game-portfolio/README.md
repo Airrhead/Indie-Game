@@ -7,7 +7,7 @@ This standalone game was extracted from `INDIEGAMEDEVELOPER/index.html`. The lat
 ## Files
 - `index.html`: the four original game screens, with English text layers.
 - `css/english.css`: vertical centering and English text sizing.
-- `js/game.js`: original game logic; only button image paths changed.
+- `js/game.js`: original game logic; English button image paths and cross-fade rendering enabled to prevent transparent backgrounds exposing previous slides.
 - `js/data.js`: 29 translated events; all event values and 10,960 game records unchanged.
 - `images/intro-background.png`: the complete text-free opening image supplied by the author, with a separate HTML English title. No title-area patch is used on this screen.
 - `images/*-en.png`: text-removal backgrounds for the remaining English screens.
@@ -68,7 +68,7 @@ Using this repository's data, salary CNY 5,000/month × one person × 18 months 
 These are direct recalculations with controlled thresholds, not new controls in the game. The playable version still uses 100 plus the three event values. Matching these examples strongly supports the supplied explanation but does not establish who collected the data.
 
 ## Verification
-English titles, parameters, event cards, both endings and replay were checked in desktop and 390-pixel-wide browser views. Vertical margins match and the narrow viewport has no horizontal page overflow. Data and event values were compared with the originals; the game script differs only in English button asset paths.
+English titles, parameters, event cards, both endings and replay were checked in desktop and 390-pixel-wide browser views. Vertical margins match and the narrow viewport has no horizontal page overflow. Data and event values were compared with the originals; the game script changes English button asset paths and enables cross-fade so inactive slides become fully transparent. Calculations and interaction order are unchanged.
 
 
 ## Extracted scroll comparison

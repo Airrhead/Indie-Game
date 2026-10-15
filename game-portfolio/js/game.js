@@ -5,6 +5,7 @@ $(document).ready(function () {
   var swiper = new Swiper(".calculator", {
     allowTouchMove: false,
     effect: "fade",
+    fadeEffect: { crossFade: true },
   });
   // 第1页
   $("#slide1-btn").on("mouseover", function () {
