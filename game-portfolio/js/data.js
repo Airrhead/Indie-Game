@@ -1,148 +1,206 @@
 var events = [
   {
-    "name": "No meeting notes! The team forgets past decisions and spends weeks revisiting the same topics. Progress -1.",
+    "name": "No meeting notes! The team forgets past decisions and spends weeks revisiting the same topics.",
     "source": "— Pink Demon, Weifeng",
-    "value": -1
+    "months": 2,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "Art needs rework! A mix-up with your artist leaves key details wrong in the final artwork. Progress -1.",
+    "name": "Art needs rework! A mix-up with your artist leaves key details wrong in the final artwork.",
     "source": "— Pink Demon, Weifeng",
-    "value": -1
+    "months": 1,
+    "cost": 0,
+    "revenue": 1
   },
   {
     "name": "Ads fall flat! Your social media ads fail to attract players.",
     "source": "— Pink Demon, Weifeng",
-    "value": -1
+    "months": 0,
+    "cost": 0,
+    "revenue": 0.8
   },
   {
     "name": "Lost in translation! Overseas players miss your story about grueling 996 work hours and leave bad reviews.",
     "source": "— Pink Demon, Weifeng",
-    "value": -1
+    "months": 0,
+    "cost": 0,
+    "revenue": 0.8
   },
   {
-    "name": "Too hard to build! Your planned system cannot be implemented and needs a redesign. Progress -1.",
+    "name": "Too hard to build! Your planned system cannot be implemented and needs a redesign.",
     "source": "— Nano0, Work or Die",
-    "value": -1
+    "months": 3,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "A mystery bug! You cannot trace the cause of a stubborn coding error. Progress -1.",
+    "name": "A mystery bug! You cannot trace the cause of a stubborn coding error.",
     "source": "— Nano0, Work or Die",
-    "value": -1
+    "months": 1,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "Out of ideas! You struggle to find fresh story or gameplay ideas, stalling development. Progress -1.",
+    "name": "Out of ideas! You struggle to find fresh story or gameplay ideas, stalling development.",
     "source": "— Nano0, Work or Die",
-    "value": -1
+    "months": 2,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "Coursework piles up! Class assignments keep interrupting development and slowing you down. Progress -1.",
+    "name": "Coursework piles up! Class assignments keep interrupting development and slowing you down.",
     "source": "— Nano0, Work or Die",
-    "value": -1
+    "months": 2,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "Engine trouble! Facial textures shift in the demo, and you struggle to fix the bug. Progress -1.",
+    "name": "Engine trouble! Facial textures shift in the demo, and you struggle to fix the bug.",
     "source": "— Lu Sui, Miao zhi Lvren",
-    "value": -1
+    "months": 1,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "Animation feels off! The visuals and motion need more fine-tuning. Progress -1.",
+    "name": "Animation feels off! The visuals and motion need more fine-tuning.",
     "source": "— Youmu, Jingyu",
-    "value": -1
+    "months": 1,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "Out of sync! Sound and visuals do not line up and need fixing. Progress -1.",
+    "name": "Out of sync! Sound and visuals do not line up and need fixing.",
     "source": "— Youmu, Jingyu",
-    "value": -1
+    "months": 1,
+    "cost": 0,
+    "revenue": 1
   },
   {
     "name": "Plans prove too optimistic! Disruptions such as the pandemic leave development far behind schedule.",
     "source": "— Yu Dajin, Wanba Warriors",
-    "value": -1
+    "months": 3,
+    "cost": 0,
+    "revenue": 1
   },
   {
     "name": "Rushed controls! The game is nearly done, but the camera moves too fast. The best time to fix it has passed.",
     "source": "— Lu Sui, Miao zhi Lvren",
-    "value": -1
+    "months": 0,
+    "cost": 0,
+    "revenue": 0.85
   },
   {
     "name": "Stress builds! Slow progress makes each day feel wasted, and you begin to doubt yourself.",
     "source": "— Yaheng, LoveChoice",
-    "value": -1
+    "months": 1,
+    "cost": 0,
+    "revenue": 1
   },
   {
     "name": "Family bills mount! Your partner faces a career setback. You must provide, but the game is far from done.",
     "source": "— Yaheng, LoveChoice",
-    "value": -1
+    "months": 2,
+    "cost": 0,
+    "revenue": 1
   },
   {
     "name": "A bad publishing deal! Inexperience leads you to accept an offer with an unfavorable revenue split.",
     "source": "— Yu Dajin, Wanba Warriors",
-    "value": -1
+    "months": 0,
+    "cost": 0,
+    "revenue": 0.75
   },
   {
-    "name": "No contractor in sight! You search online for someone who can solve your technical problems. Progress -1.",
+    "name": "No contractor in sight! You search online for someone who can solve your technical problems.",
     "source": "— Yu Dajin, Wanba Warriors",
-    "value": -1
+    "months": 1,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "A clash of visions! You and your teammates cannot agree on the game’s direction or design. Progress -1.",
+    "name": "A clash of visions! You and your teammates cannot agree on the game’s direction or design.",
     "source": "— Lu Sui, Miao zhi Lvren",
-    "value": -1
+    "months": 2,
+    "cost": 0,
+    "revenue": 1
   },
   {
     "name": "Douban buzz! Sharing your development story in an active group brings players, feedback and praise.",
     "source": "— Pink Demon, Weifeng",
-    "value": 1
+    "months": 0,
+    "cost": 0,
+    "revenue": 1.2
   },
   {
     "name": "A surprise boost! Your tagged game poster on Xiaohongshu gains platform exposure, likes and comments.",
     "source": "— Pink Demon, Weifeng",
-    "value": 1
+    "months": 0,
+    "cost": 0,
+    "revenue": 1.2
   },
   {
     "name": "Word spreads abroad! Russian players share your game on a local forum. New fans play using translation tools.",
     "source": "— Pink Demon, Weifeng",
-    "value": 1
+    "months": 0,
+    "cost": 0,
+    "revenue": 1.2
   },
   {
-    "name": "A mentor helps! You contact a favorite developer and work through development hurdles together. Progress +1.",
+    "name": "A mentor helps! You contact a favorite developer and work through development hurdles together.",
     "source": "— Pink Demon, Weifeng",
-    "value": 1
+    "months": -1,
+    "cost": 0,
+    "revenue": 1
   },
   {
-    "name": "Friends lend a hand! Skilled friends cover gaps in your team at no charge. Progress +1.",
+    "name": "Friends lend a hand! Skilled friends cover gaps in your team at no charge.",
     "source": "— Jiandan You Haochi, Baodan Yingxiong",
-    "value": 1
+    "months": -2,
+    "cost": 0,
+    "revenue": 1
   },
   {
     "name": "Romance draws a crowd! Your love-story theme attracts fans who do not usually play indie games.",
     "source": "— Yaheng, LoveChoice",
-    "value": 1
+    "months": 0,
+    "cost": 0,
+    "revenue": 1.2
   },
   {
     "name": "Funding secured! An Unreal MegaGrant helps cover development costs.",
     "source": "— Guo Lei, Suguang Xing",
-    "value": 1
+    "months": 0,
+    "cost": -100000,
+    "revenue": 1
   },
   {
     "name": "Family backs you! Steady financial support eases your worries over costs.",
     "source": "— Nano0, Work or Die",
-    "value": 1
+    "months": 0,
+    "cost": -50000,
+    "revenue": 1
   },
   {
     "name": "Publishers take notice! Several publishers admire your game and want to work with you.",
     "source": "— Nano0, Work or Die",
-    "value": 1
+    "months": 0,
+    "cost": 0,
+    "revenue": 1.3
   },
   {
     "name": "A creator reaches out! A gaming video creator offers to help promote your game.",
     "source": "— Nano0, Work or Die",
-    "value": 1
+    "months": 0,
+    "cost": 0,
+    "revenue": 1.2
   },
   {
-    "name": "Expert backup! A skilled artist joins to help with art and map design. Progress +1.",
+    "name": "Expert backup! A skilled artist joins to help with art and map design.",
     "source": "— Lu Sui, Miao zhi Lvren",
-    "value": 1
+    "months": -2,
+    "cost": 0,
+    "revenue": 1
   }
 ];
 

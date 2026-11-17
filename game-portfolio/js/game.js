@@ -1,12 +1,14 @@
 $(document).ready(function () {
+  var THRESHOLD = 100; // fixed minimum review count for the comparison sample
   var eventnum = 1;
-  var threshold = 100;
+  var drawnEvents = [];
 
   var swiper = new Swiper(".calculator", {
     allowTouchMove: false,
     effect: "fade",
     fadeEffect: { crossFade: true },
   });
+
   // 第1页
   $("#slide1-btn").on("mouseover", function () {
     this.setAttribute("src", "images/button2-en.svg");
@@ -34,24 +36,18 @@ $(document).ready(function () {
   });
   $("#slide2-btn").on("click", function () {
     $("#fanye")[0].play();
-    arrIndex = [
-      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-      21, 22, 23, 24, 25, 26, 27, 28,
-    ];
+    var arrIndex = [];
+    for (var k = 0; k < events.length; k++) arrIndex.push(k);
     shuffleArray(arrIndex);
-    $(".eventname1").html(events[arrIndex[0]].name);
-    $(".eventsource1").html(events[arrIndex[0]].source);
+    drawnEvents = [events[arrIndex[0]], events[arrIndex[1]], events[arrIndex[2]]];
 
-    $(".eventname2").html(events[arrIndex[1]].name);
-    $(".eventsource2").html(events[arrIndex[1]].source);
-
-    $(".eventname3").html(events[arrIndex[2]].name);
-    $(".eventsource3").html(events[arrIndex[2]].source);
-
-    threshold = threshold + events[arrIndex[0]].value;
-    threshold = threshold + events[arrIndex[1]].value;
-    threshold = threshold + events[arrIndex[2]].value;
-    console.log(threshold);
+    for (var n = 0; n < 3; n++) {
+      var ev = drawnEvents[n];
+      $(".eventname" + (n + 1)).html(
+        ev.name + ' <span class="event-effect">' + effectLabel(ev) + "</span>"
+      );
+      $(".eventsource" + (n + 1)).html(ev.source);
+    }
     swiper.slideNext();
     $(".randomevent1").addClass("animate__bounceInDown");
   });
@@ -72,15 +68,16 @@ $(document).ready(function () {
         begin_calc();
         swiper.slideNext();
     }
+  });
 
-    $("#slide4-btn").on("click", function () {
-      eventnum = 1;
-      threshold = 100;
-      swiper.slideTo(1);
-      $(".randomevent1").removeClass("animate__bounceInDown");
-      $(".randomevent2").removeClass("animate__bounceInDown");
-      $(".randomevent3").removeClass("animate__bounceInDown");
-    });
+  // 第4页：重玩（移出第3页的回调，避免重复绑定）
+  $("#slide4-btn").on("click", function () {
+    eventnum = 1;
+    drawnEvents = [];
+    swiper.slideTo(1);
+    $(".randomevent1").removeClass("animate__bounceInDown");
+    $(".randomevent2").removeClass("animate__bounceInDown");
+    $(".randomevent3").removeClass("animate__bounceInDown");
   });
 
   function shuffleArray(arr) {
@@ -90,43 +87,60 @@ $(document).ready(function () {
     }
     return arr;
   }
+
+  // 事件卡上显示的效果标签
+  function effectLabel(ev) {
+    var parts = [];
+    if (ev.months > 0) parts.push("Development +" + ev.months + (ev.months === 1 ? " month" : " months"));
+    if (ev.months < 0) parts.push("Development " + ev.months + (ev.months === -1 ? " month" : " months"));
+    if (ev.cost < 0) parts.push("Costs −CNY " + Math.abs(ev.cost).toLocaleString("en-US"));
+    if (ev.cost > 0) parts.push("Costs +CNY " + ev.cost.toLocaleString("en-US"));
+    if (ev.revenue !== 1) {
+      var pct = Math.round((ev.revenue - 1) * 100);
+      parts.push("Revenue " + (pct > 0 ? "+" : "−") + Math.abs(pct) + "%");
+    }
+    return parts.join(" · ");
+  }
+
   function begin_calc() {
-    var price, salary, peoplenum, period, death_rate;
+    var price = Number($("#price").val());
+    var salary = Number($("#salary").val());
+    var peoplenum = Number($("#peoplenum").val());
+    var period = Number($("#period").val());
+
+    // 叠加三个事件的效果
+    var extraMonths = 0;
+    var costChange = 0;
+    var revenueMultiplier = 1;
+    for (var n = 0; n < drawnEvents.length; n++) {
+      extraMonths += drawnEvents[n].months;
+      costChange += drawnEvents[n].cost;
+      revenueMultiplier *= drawnEvents[n].revenue;
+    }
+
+    var months = Math.max(1, period + extraMonths);
+    var dev_expenses = Math.max(0, salary * 1000 * peoplenum * months + costChange);
+
     var alive_gamenum = 0;
     var dead_gamenum = 0;
-    var total_gamenum = 0;
-
-    price = $("#price").val();
-    salary = $("#salary").val();
-    peoplenum = $("#peoplenum").val();
-    period = $("#period").val();
-
-    dev_expenses = salary * 1000 * peoplenum * period;
-
     for (var i = 0; i < gameArr.length; i++) {
-      all_comments = gameArr[i].good_comments + gameArr[i].bad_comments;
-      sale_forecast = all_comments * 30 * price;
-      income_forecast = sale_forecast * 0.65;
-      if (all_comments >= threshold) {
-        if (income_forecast > dev_expenses) {
-          alive_gamenum += 1;
-        } else {
-          dead_gamenum += 1;
-        }
+      var all_comments = gameArr[i].good_comments + gameArr[i].bad_comments;
+      if (all_comments < THRESHOLD) continue;
+      var income_forecast = all_comments * 30 * price * 0.65 * revenueMultiplier;
+      if (income_forecast > dev_expenses) {
+        alive_gamenum += 1;
+      } else {
+        dead_gamenum += 1;
       }
     }
 
-    total_gamenum = alive_gamenum + dead_gamenum;
-    death_rate = dead_gamenum / total_gamenum;
-    death_rate_show = ((dead_gamenum / total_gamenum) * 100).toFixed(1) + "%";
-    console.log(death_rate);
-    $("#result").html(death_rate_show);
+    var total_gamenum = alive_gamenum + dead_gamenum;
+    var death_rate = dead_gamenum / total_gamenum;
+    $("#result").html((death_rate * 100).toFixed(1) + "%");
     if (death_rate < 0.5) {
-      // $(".slide4").css("background-image", "url(images/活.png)");
-      $("#gameresult").attr("src", "images/活.png")
+      $("#gameresult").attr("src", "images/活.png");
     } else {
-      // $(".slide4").css("background-image", "url(images/死.png)");
-      $("#gameresult").attr("src", "images/死.png")
+      $("#gameresult").attr("src", "images/死.png");
     }
   }
 });
